@@ -6,38 +6,38 @@ const About = () => {
   const specializations = [
     {
       icon: Network,
-      title: "Network Architecture",
-      description: "Design and implementation of scalable, high-performance network infrastructures"
+      title: "Network Solutions",
+      description: "Technical design and implementation of robust network infrastructures with MikroTik and Cisco"
     },
     {
       icon: Shield,
-      title: "Cybersecurity",
-      description: "Advanced threat detection, prevention, and incident response strategies"
+      title: "Perimeter Security",
+      description: "FortiGate NGFW implementation and advanced security policy management"
     },
     {
       icon: Server,
-      title: "Systems Administration",
-      description: "Expert management of enterprise servers and virtualized environments"
+      title: "Virtualization",
+      description: "Proxmox cluster design and high-availability system administration"
     },
     {
       icon: Cloud,
-      title: "Cloud Solutions",
-      description: "Migration and optimization of hybrid cloud and multi-cloud architectures"
+      title: "Modern Networking",
+      description: "SDN solutions with ZeroTier, Tailscale, and VPN technologies (WireGuard, IPsec, OpenVPN)"
     },
     {
       icon: Database,
-      title: "Data Management",
-      description: "Database optimization, backup strategies, and disaster recovery planning"
+      title: "Wireless Solutions",
+      description: "High-capacity Ubiquiti deployments and wireless controller management"
     },
     {
       icon: Lock,
-      title: "Security Compliance",
-      description: "Implementation of industry standards and regulatory compliance frameworks"
+      title: "Automation",
+      description: "Python and Bash scripting with Infrastructure as Code concepts using Ansible"
     }
   ];
 
   const certifications = [
-    "CISSP", "CCNP", "MCSE", "AWS Solutions Architect", "VMware VCP", "CompTIA Security+"
+    "BeyondTrust PRA Administrator", "Huawei HCNA Access", "MikroTik Certified", "FortiGate Specialist", "Proxmox Expert", "Docker Enthusiast"
   ];
 
   return (
@@ -48,10 +48,10 @@ const About = () => {
             About <span className="text-gradient">Me</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Passionate network and systems expert with over a decade of experience in designing, 
-            implementing, and securing enterprise-grade IT infrastructures. I specialize in 
-            creating robust, scalable solutions that drive business innovation and ensure 
-            operational excellence.
+            My approach is practical: I choose the best tool for each challenge. I enjoy designing robust networks with MikroTik, 
+            implementing perimeter security with FortiGate, and deploying high-capacity wireless solutions with Ubiquiti.
+            My passion for technology extends into my hobbies - designing virtualization clusters with Proxmox, 
+            containerizing applications with Docker, and exploring modern networking solutions like ZeroTier and Tailscale.
           </p>
         </div>
 

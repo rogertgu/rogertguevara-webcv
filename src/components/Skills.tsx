@@ -4,43 +4,43 @@ import { Progress } from "@/components/ui/progress";
 const Skills = () => {
   const skillCategories = [
     {
-      category: "Network Technologies",
+      category: "Networking & Security",
       skills: [
-        { name: "Cisco Technologies", level: 95 },
-        { name: "Network Security", level: 90 },
-        { name: "Load Balancing", level: 88 },
-        { name: "VPN & Remote Access", level: 92 },
-        { name: "Network Monitoring", level: 87 }
+        { name: "FortiGate NGFW", level: 92 },
+        { name: "MikroTik RouterOS", level: 95 },
+        { name: "Ubiquiti Wireless", level: 90 },
+        { name: "VPN Technologies (WireGuard, IPsec, OpenVPN)", level: 88 },
+        { name: "SDN (ZeroTier, Tailscale)", level: 85 }
       ]
     },
     {
-      category: "Systems & Virtualization",
+      category: "Virtualization & Systems",
       skills: [
-        { name: "Windows Server", level: 93 },
-        { name: "Linux Administration", level: 89 },
-        { name: "VMware vSphere", level: 91 },
-        { name: "Hyper-V", level: 85 },
-        { name: "Container Technologies", level: 82 }
+        { name: "Proxmox", level: 93 },
+        { name: "Docker Containerization", level: 90 },
+        { name: "High Availability Cluster Design", level: 87 },
+        { name: "Linux Administration", level: 92 },
+        { name: "SSO Implementation", level: 85 }
       ]
     },
     {
-      category: "Cloud & DevOps",
+      category: "Network Operations",
       skills: [
-        { name: "AWS", level: 88 },
-        { name: "Azure", level: 85 },
-        { name: "Infrastructure as Code", level: 83 },
-        { name: "CI/CD Pipelines", level: 80 },
-        { name: "Kubernetes", level: 78 }
+        { name: "Multi-vendor Network Management", level: 94 },
+        { name: "WLC Administration (Cisco, Huawei)", level: 89 },
+        { name: "Advanced Switching Configuration", level: 91 },
+        { name: "GPON Network Provisioning", level: 86 },
+        { name: "L2 Incident Resolution", level: 93 }
       ]
     },
     {
-      category: "Security & Compliance",
+      category: "Automation & Scripting",
       skills: [
-        { name: "Firewall Management", level: 94 },
-        { name: "Incident Response", level: 91 },
-        { name: "Risk Assessment", level: 88 },
-        { name: "Compliance Frameworks", level: 86 },
-        { name: "Penetration Testing", level: 83 }
+        { name: "Python Scripting", level: 85 },
+        { name: "Bash Scripting", level: 88 },
+        { name: "Ansible (IaC Concepts)", level: 82 },
+        { name: "Network Automation", level: 84 },
+        { name: "Service Deployment Tools", level: 86 }
       ]
     }
   ];
@@ -95,8 +95,8 @@ const Skills = () => {
           <h3 className="text-2xl font-semibold mb-8">Technology Stack</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {[
-              "Cisco", "VMware", "Microsoft", "AWS", "Linux", "Docker",
-              "Kubernetes", "Ansible", "Terraform", "Palo Alto", "Fortinet", "Splunk"
+              "FortiGate", "MikroTik", "Ubiquiti", "Proxmox", "Docker", "ZeroTier",
+              "Tailscale", "WireGuard", "Cisco", "Huawei", "Python", "Ansible"
             ].map((tech, index) => (
               <div 
                 key={tech}

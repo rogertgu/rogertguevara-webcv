@@ -5,60 +5,32 @@ import { Calendar, MapPin, Building } from "lucide-react";
 const Experience = () => {
   const experiences = [
     {
-      role: "Senior Network Architect",
-      company: "TechCorp Solutions",
-      location: "Madrid, Spain",
-      period: "2021 - Present",
-      type: "Full-time",
+      role: "Network Solutions Engineer",
+      company: "OmniAccess",
+      location: "Remote",
+      period: "Nov 2021 - Present",
+      type: "Full-time (Promoted from Service Delivery Network Engineer)",
       achievements: [
-        "Led the design and implementation of a multi-site WAN architecture serving 15,000+ users",
-        "Reduced network downtime by 40% through proactive monitoring and redundancy planning",
-        "Implemented zero-trust security model resulting in 60% reduction in security incidents",
-        "Managed a team of 8 network engineers across 3 geographical locations"
+        "Technical design and implementation of client network solutions, focusing on optimization and security",
+        "Creation of internal tools to improve the deployment of network services and applications",
+        "Analysis and evaluation of complex services, ensuring compliance with technical requirements",
+        "Technical escalation point for resolving complex network and system incidents"
       ],
-      technologies: ["Cisco", "Fortinet", "VMware NSX", "AWS", "Python", "Ansible"]
+      technologies: ["FortiGate", "MikroTik", "Ubiquiti", "Python", "Ansible", "Network Automation"]
     },
     {
-      role: "Systems Infrastructure Manager",
-      company: "Global Enterprises Inc",
-      location: "Barcelona, Spain",
-      period: "2018 - 2021",
+      role: "NOC L2",
+      company: "SAMPOL DIGITAL SL",
+      location: "Spain",
+      period: "Jun 2020 - Nov 2021",
       type: "Full-time",
       achievements: [
-        "Orchestrated migration of 200+ servers to hybrid cloud infrastructure",
-        "Designed disaster recovery solution with RPO < 4 hours and RTO < 2 hours",
-        "Implemented infrastructure monitoring reducing MTTR by 50%",
-        "Led compliance initiatives achieving SOC 2 Type II certification"
+        "Management, maintenance, and monitoring of multi-vendor networks (Ethernet, IPTV, VoIP, Wireless)",
+        "Resolution of L2 incidents, administration of WLCs (Cisco, Huawei) and advanced switching configuration",
+        "Core network management using Cisco and MikroTik (RouterOS), including GPON network provisioning",
+        "Administration of virtualization environments with Proxmox"
       ],
-      technologies: ["VMware vSphere", "Microsoft Azure", "PowerShell", "Terraform", "Splunk"]
-    },
-    {
-      role: "Network Security Specialist",
-      company: "SecureNet Technologies",
-      location: "Valencia, Spain",
-      period: "2016 - 2018",
-      type: "Full-time",
-      achievements: [
-        "Developed and maintained network security policies for 50+ enterprise clients",
-        "Conducted security assessments identifying and remediating 200+ vulnerabilities",
-        "Implemented next-generation firewall solutions improving threat detection by 70%",
-        "Created incident response procedures reducing response time from hours to minutes"
-      ],
-      technologies: ["Palo Alto", "Check Point", "Wireshark", "Nessus", "Metasploit", "SIEM"]
-    },
-    {
-      role: "Junior Systems Administrator",
-      company: "DataFlow Solutions",
-      location: "Sevilla, Spain",
-      period: "2014 - 2016",
-      type: "Full-time",
-      achievements: [
-        "Maintained 99.8% uptime across 100+ Windows and Linux servers",
-        "Automated routine tasks reducing manual work by 60%",
-        "Implemented backup solutions ensuring 100% data recovery capability",
-        "Provided 24/7 technical support for critical business applications"
-      ],
-      technologies: ["Windows Server", "Red Hat Linux", "VMware", "PowerShell", "Bash"]
+      technologies: ["Cisco", "Huawei", "MikroTik", "Proxmox", "GPON", "WLC Management"]
     }
   ];
 

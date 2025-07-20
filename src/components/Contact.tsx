@@ -9,19 +9,19 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "contact@networksystems.expert",
-      link: "mailto:contact@networksystems.expert"
+      value: "inforogert@gmail.com",
+      link: "mailto:inforogert@gmail.com"
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+34 612 345 678",
-      link: "tel:+34612345678"
+      value: "Available upon request",
+      link: null
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "Madrid, Spain",
+      value: "Remote / Spain",
       link: null
     }
   ];
@@ -49,8 +49,8 @@ const Contact = () => {
             Let's <span className="text-gradient">Connect</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to discuss your network infrastructure needs or explore collaboration opportunities? 
-            I'd love to hear from you.
+            Got an interesting challenge? Let's connect and explore 
+            how we can build robust network solutions together.
           </p>
         </div>
 

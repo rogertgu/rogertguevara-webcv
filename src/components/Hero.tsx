@@ -34,13 +34,13 @@ const Hero = () => {
       <div className="relative z-10 text-center space-y-8 px-4 max-w-5xl mx-auto">
         <div className="space-y-4 animate-fade-in-up">
           <h1 className="text-5xl md:text-7xl font-space-grotesk font-bold">
-            <span className="text-gradient">Network & Systems</span>
+            <span className="text-gradient">Rogert</span> Guevara
             <br />
-            <span className="text-foreground">Expert</span>
+            <span className="text-foreground">Uzcátegui</span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Architecting robust network infrastructures and secure systems solutions 
-            for the digital age
+            Senior Infrastructure and Network Specialist. 
+            Designing robust networks and implementing modern security solutions.
           </p>
         </div>
 
@@ -65,16 +65,16 @@ const Hero = () => {
         {/* Tech stats */}
         <div className="grid grid-cols-3 gap-8 pt-12 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-gradient">10+</div>
+            <div className="text-3xl md:text-4xl font-bold text-gradient">4+</div>
             <div className="text-sm text-muted-foreground">Years Experience</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-gradient">500+</div>
-            <div className="text-sm text-muted-foreground">Networks Deployed</div>
+            <div className="text-3xl md:text-4xl font-bold text-gradient">Multi-vendor</div>
+            <div className="text-sm text-muted-foreground">Networks Managed</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-gradient">99.9%</div>
-            <div className="text-sm text-muted-foreground">Uptime Achieved</div>
+            <div className="text-3xl md:text-4xl font-bold text-gradient">L2/L3</div>
+            <div className="text-sm text-muted-foreground">NOC Expertise</div>
           </div>
         </div>
       </div>
