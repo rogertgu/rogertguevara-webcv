@@ -34,7 +34,7 @@ const Contact = () => {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      link: "https://linkedin.com/in/networksystems",
+      link: "https://www.linkedin.com/in/rogert-guevara-uzcategui",
       color: "hover:text-[#0077B5]"
     }
   ];
@@ -136,7 +136,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <Card className="p-8 bg-card/30 border-4 border-red-500" style={{ zIndex: 1000 }}>
+          <Card className="p-8 bg-card/30 backdrop-blur border-animated animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             <h3 className="text-2xl font-semibold mb-6">Send Me a Message</h3>
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid md:grid-cols-2 gap-4">

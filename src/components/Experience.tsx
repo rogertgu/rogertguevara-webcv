@@ -7,7 +7,7 @@ const Experience = () => {
     {
       role: "Network Solutions Engineer",
       company: "OmniAccess",
-      location: "Remote",
+      location: "Spain",
       period: "Nov 2021 - Present",
       type: "Full-time (Promoted from Service Delivery Network Engineer)",
       achievements: [
