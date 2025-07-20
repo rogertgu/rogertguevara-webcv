@@ -63,18 +63,22 @@ const Hero = () => {
         </div>
 
         {/* Tech stats */}
-        <div className="grid grid-cols-3 gap-8 pt-12 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-gradient">4+</div>
+            <div className="text-2xl md:text-3xl font-bold text-gradient">Over 10 Years in IT</div>
             <div className="text-sm text-muted-foreground">Years Experience</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-gradient">Multi-vendor</div>
-            <div className="text-sm text-muted-foreground">Networks Managed</div>
+            <div className="text-2xl md:text-3xl font-bold text-gradient">Network Expert</div>
+            <div className="text-sm text-muted-foreground">Enterprise Solutions</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-gradient">L2/L3</div>
-            <div className="text-sm text-muted-foreground">NOC Expertise</div>
+            <div className="text-2xl md:text-3xl font-bold text-gradient">Cloud & On-Premises</div>
+            <div className="text-sm text-muted-foreground">Hybrid Architect</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl md:text-3xl font-bold text-gradient">Open Source & AI Lover</div>
+            <div className="text-sm text-muted-foreground">Tech Enthusiast</div>
           </div>
         </div>
       </div>
