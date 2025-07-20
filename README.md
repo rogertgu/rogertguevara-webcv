@@ -1,78 +1,53 @@
-# Welcome to your Lovable project
+# Rogert Guevara's Web CV
 
-## Project info
+> I'm not going to lie to you: I'm neither a designer nor a programmer. This entire site was built by the magic of AI in less than 3 hours. Enjoy!
 
-**URL**: https://lovable.dev/projects/b8dd052e-8db3-4538-aef4-d037bd741fd5
+## About
 
-## How can I edit this code?
+This is my personal web CV and portfolio, built with React, Vite, and Tailwind CSS. It includes my professional experience, skills, and contact form (with real email sending via EmailJS).
 
-There are several ways of editing your application.
+## How to customize for another person
 
-**Use Lovable**
+To use this template for someone else, edit the following files:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/b8dd052e-8db3-4538-aef4-d037bd741fd5) and start prompting.
+- **src/components/Hero.tsx**: Name, title, and about/summary.
+- **src/components/About.tsx**: About text, specializations, certifications.
+- **src/components/Experience.tsx**: Work experience (companies, roles, achievements, technologies).
+- **src/components/Skills.tsx**: Skills categories, skill names, and levels.
+- **src/components/Contact.tsx**: Contact info (email, LinkedIn, phone, location, etc.).
 
-Changes made via Lovable will be committed automatically to this repo.
+You can also update the profile picture and assets in `src/assets/` if needed.
 
-**Use your preferred IDE**
+## How to run locally
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/rogertgu/rogertguevara-webcv.git
+   cd rogertguevara-webcv
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Create a `.env` file with your EmailJS credentials:
+   ```env
+   VITE_EMAILJS_SERVICE_ID=your_service_id
+   VITE_EMAILJS_TEMPLATE_ID=your_template_id
+   VITE_EMAILJS_PUBLIC_KEY=your_public_key
+   ```
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Deployment
 
-Follow these steps:
+This site is deployed on GitHub Pages. To deploy:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```bash
+npm run deploy
 ```
 
-**Edit a file directly in GitHub**
+## Credits
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/b8dd052e-8db3-4538-aef4-d037bd741fd5) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
-
-## Créditos y herramientas
-
-- El diseño base de esta web fue realizado con [Lovable](https://lovable.so/).
-- Parte de las modificaciones y automatizaciones se realizaron con [Cursor](https://www.cursor.so/).
+- The base design of this site was made with [Lovable](https://lovable.so/).
