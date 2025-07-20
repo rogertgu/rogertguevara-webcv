@@ -2,9 +2,13 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Linkedin, Github, Download } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Download } from "lucide-react";
+import { useState } from "react";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+  const [sent, setSent] = useState(false);
+
   const contactInfo = [
     {
       icon: Mail,
@@ -32,14 +36,30 @@ const Contact = () => {
       label: "LinkedIn",
       link: "https://linkedin.com/in/networksystems",
       color: "hover:text-[#0077B5]"
-    },
-    {
-      icon: Github,
-      label: "GitHub",
-      link: "https://github.com/networksystems",
-      color: "hover:text-foreground"
     }
   ];
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    emailjs.sendForm(
+      serviceId,
+      templateId,
+      e.target as HTMLFormElement,
+      publicKey
+    ).then(
+      (result) => {
+        setSent(true);
+        setTimeout(() => setSent(false), 4000);
+      },
+      (error) => {
+        alert('Error al enviar el mensaje. Intenta de nuevo.');
+      }
+    );
+  };
 
   return (
     <section id="contact" className="py-24 px-4 bg-gradient-dark">
@@ -53,7 +73,6 @@ const Contact = () => {
             how we can build robust network solutions together.
           </p>
         </div>
-
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-8 animate-fade-in-up">
@@ -117,9 +136,9 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <Card className="p-8 bg-card/30 backdrop-blur border-animated animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
-            <form className="space-y-6">
+          <Card className="p-8 bg-card/30 border-4 border-red-500" style={{ zIndex: 1000 }}>
+            <h3 className="text-2xl font-semibold mb-6">Send Me a Message</h3>
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="name" className="text-sm font-medium block mb-2">
@@ -127,8 +146,10 @@ const Contact = () => {
                   </label>
                   <Input 
                     id="name"
+                    name="name"
                     placeholder="Your name"
                     className="bg-background/50 border-border/50 focus:border-primary"
+                    required
                   />
                 </div>
                 <div>
@@ -137,42 +158,50 @@ const Contact = () => {
                   </label>
                   <Input 
                     id="email"
+                    name="email"
                     type="email"
                     placeholder="your.email@example.com"
                     className="bg-background/50 border-border/50 focus:border-primary"
+                    required
                   />
                 </div>
               </div>
-              
               <div>
                 <label htmlFor="subject" className="text-sm font-medium block mb-2">
                   Subject
                 </label>
                 <Input 
                   id="subject"
+                  name="subject"
                   placeholder="How can I help you?"
                   className="bg-background/50 border-border/50 focus:border-primary"
+                  required
                 />
               </div>
-              
               <div>
                 <label htmlFor="message" className="text-sm font-medium block mb-2">
                   Message
                 </label>
                 <Textarea 
                   id="message"
+                  name="message"
                   placeholder="Tell me about your project or requirements..."
                   rows={4}
                   className="bg-background/50 border-border/50 focus:border-primary resize-none"
+                  required
                 />
               </div>
-              
               <Button 
                 type="submit"
                 className="w-full bg-gradient-primary hover:shadow-glow transition-all duration-300"
               >
                 Send Message
               </Button>
+              {sent && (
+                <div className="mt-4 text-green-600 text-center animate-fade-in-up">
+                  Thank you for your message! I will get back to you soon.
+                </div>
+              )}
             </form>
           </Card>
         </div>
