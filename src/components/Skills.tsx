@@ -1,46 +1,53 @@
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 
+const levelToValue = {
+  "High": 90,
+  "Medium-High": 75,
+  "Medium": 60,
+  "Low": 40
+};
+
 const Skills = () => {
   const skillCategories = [
     {
       category: "Networking & Security",
       skills: [
-        { name: "FortiGate NGFW", level: 92 },
-        { name: "MikroTik RouterOS", level: 95 },
-        { name: "Ubiquiti Wireless", level: 90 },
-        { name: "VPN Technologies (WireGuard, IPsec, OpenVPN)", level: 88 },
-        { name: "SDN (ZeroTier, Tailscale)", level: 85 }
+        { name: "FortiGate NGFW", level: "High" },
+        { name: "MikroTik RouterOS", level: "High" },
+        { name: "Ubiquiti Wireless", level: "High" },
+        { name: "VPN Technologies (WireGuard, IPsec, OpenVPN)", level: "High" },
+        { name: "SDN (ZeroTier, Tailscale)", level: "Medium-High" }
       ]
     },
     {
       category: "Virtualization & Systems",
       skills: [
-        { name: "Proxmox", level: 93 },
-        { name: "Docker Containerization", level: 90 },
-        { name: "High Availability Cluster Design", level: 87 },
-        { name: "Linux Administration", level: 92 },
-        { name: "SSO Implementation", level: 85 }
+        { name: "Proxmox", level: "High" },
+        { name: "Docker Containerization", level: "High" },
+        { name: "High Availability Cluster Design", level: "Medium-High" },
+        { name: "Linux Administration", level: "High" },
+        { name: "SSO Implementation", level: "Medium" }
       ]
     },
     {
       category: "Network Operations",
       skills: [
-        { name: "Multi-vendor Network Management", level: 94 },
-        { name: "WLC Administration (Cisco, Huawei)", level: 89 },
-        { name: "Advanced Switching Configuration", level: 91 },
-        { name: "GPON Network Provisioning", level: 86 },
-        { name: "L2 Incident Resolution", level: 93 }
+        { name: "Multi-vendor Network Management", level: "High" },
+        { name: "WLC Administration (Cisco, Huawei)", level: "Medium-High" },
+        { name: "Advanced Switching Configuration", level: "High" },
+        { name: "GPON Network Provisioning", level: "Medium" },
+        { name: "L2 Incident Resolution", level: "High" }
       ]
     },
     {
       category: "Automation & Scripting",
       skills: [
-        { name: "Python Scripting", level: 85 },
-        { name: "Bash Scripting", level: 88 },
-        { name: "Ansible (IaC Concepts)", level: 82 },
-        { name: "Network Automation", level: 84 },
-        { name: "Service Deployment Tools", level: 86 }
+        { name: "Python Scripting", level: "Medium-High" },
+        { name: "Bash Scripting", level: "High" },
+        { name: "Ansible (IaC Concepts)", level: "Medium" },
+        { name: "Network Automation", level: "Medium-High" },
+        { name: "Service Deployment Tools", level: "Medium" }
       ]
     }
   ];
@@ -57,7 +64,6 @@ const Skills = () => {
             cloud technologies, and cybersecurity domains.
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 gap-8">
           {skillCategories.map((category, categoryIndex) => (
             <Card 
@@ -77,10 +83,10 @@ const Skills = () => {
                   >
                     <div className="flex justify-between items-center mb-2">
                       <span className="text-sm font-medium">{skill.name}</span>
-                      <span className="text-sm text-muted-foreground">{skill.level}%</span>
+                      <span className="text-sm text-muted-foreground">{skill.level}</span>
                     </div>
                     <Progress 
-                      value={skill.level} 
+                      value={levelToValue[skill.level] || 0} 
                       className="h-2 bg-secondary/50"
                     />
                   </div>
@@ -89,7 +95,6 @@ const Skills = () => {
             </Card>
           ))}
         </div>
-
         {/* Additional tech stack */}
         <div className="mt-16 text-center animate-fade-in-up">
           <h3 className="text-2xl font-semibold mb-8">Technology Stack</h3>
