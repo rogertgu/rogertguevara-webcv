@@ -41,6 +41,11 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const formData = new FormData(e.target as HTMLFormElement);
+    if (formData.get('website')) {
+      // Honeypot field filled: probable bot, no enviar
+      return;
+    }
     const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
     const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
@@ -139,6 +144,8 @@ const Contact = () => {
           <Card className="p-8 bg-card/30 backdrop-blur border-animated animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             <h3 className="text-2xl font-semibold mb-6">Send Me a Message</h3>
             <form className="space-y-6" onSubmit={handleSubmit}>
+              {/* Honeypot anti-bot field */}
+              <input type="text" name="website" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="name" className="text-sm font-medium block mb-2">
